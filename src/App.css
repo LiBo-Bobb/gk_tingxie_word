@@ -1,0 +1,450 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.App {
+    text-align: center;
+}
+
+.App * {
+    color: #666666
+}
+
+.App .white {
+    color: white;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.panel_front {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 115px;
+    border: 1px solid #ECECEC;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/*播放器*/
+.App-audio {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+    border: 0 solid blue;
+    background-color: #39b2e6;
+    position: absolute;
+}
+
+.ScratchCard__Result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    background: rgba(236, 241, 243, 0.9);
+    font: normal bold 30px/30px sans-serif;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.topTitle {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 0 solid red;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.topTitle .catalogPng {
+    width: 20px;
+    height: 20px;
+    border: 0 solid red;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.topTitle .catalog {
+    width: 55px;
+    margin-top: 17px;
+    color: white;
+    border-right: 1px dotted white;
+    line-height: 22px;
+    font-size: 14px;
+    height: 22px;
+    margin-left: -15px;
+}
+
+.topTitle .icon {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 15px
+}
+
+.cardBehind .topTitle .icon {
+    border: 1px solid #BDBDBD;
+    color: #666
+}
+
+.topTitle .totaltime {
+    margin-left: 5px;
+    margin-top: 14px;
+}
+
+.topTitle .shiftCard {
+    width: 60px;
+    position: absolute;
+    height: 22px;
+    border: 1px solid white;
+    margin-left: 180px;
+    line-height: 22px;
+    text-align: center;
+    top: 15px;
+    font-size: 14px;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.showAnswerWrp {
+    width: 340px;
+    height: 130px;
+    border: 0 solid black;
+    margin: 10px auto;
+
+}
+
+/*刮开显示答案*/
+.App-answer {
+    width: 260px;
+    height: 100px;
+    border: 0 solid gray;
+    margin: 20px auto;
+    background-color: #f6f6f6;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+    color: gray;
+}
+
+.App-answers {
+    width: 260px;
+    height: 100px;
+    border: 1px solid black;
+    line-height: 100px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: 10px auto;
+    position: fixed;
+    top: 310px;
+    left: 75px;
+}
+
+.qiehuan {
+    width: 100%;
+    border: 0 solid red;
+    margin: auto;
+    line-height: 30px;
+    display: -webkit-flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 110px;
+    bottom: 80px;
+}
+
+.pre {
+    width: 75px;
+    height: 64px;
+    border: 0 solid green;
+    text-align: center;
+    color: white;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAiCAYAAAC5gzL5AAAAAXNSR0IArs4c6QAAAOBJREFUSA3tlsENgkAQRYkxXrl4pgYswRtleKAES6ATCrADq7AGG/DoYXyfsGYvBJi5aMJPJkuA99mdnZ1QFE6ZWUlchO89HsAHuBtx5vro8SgAe0J6EtVqE6BONHoRJ49BO+Bmb8bGY9AACpZaj0ENqOlLncegAlQCpd5joFp4DLjZnVFbu1wCCIGSjMrl9Pgm0FYLlDB5+OdaYDd3q/d+CiAXsdJOxhjFEpsZxY57ZhRrPJlR3gLrdH/1GD6A+iIm8VYwGsWaUlr/VkMpE9MjOfrdGrpOz3vmCcv6/uR8APtL2H+kn/A9AAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pre:active {
+    opacity: 0.3;
+    background-color: cadetblue;
+}
+
+.play {
+    width: 80px;
+    height: 80px;
+    border: 0 solid gray;
+    border-radius: 40px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    background-color: #3095c1;
+}
+
+.next {
+    width: 75px;
+    height: 64px;
+    border: 0 solid green;
+    float: right;
+    color: white;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAiCAYAAAC5gzL5AAAAAXNSR0IArs4c6QAAAWRJREFUSA2llCFIQ1EUhnfHEAYDByszrCy5IGtLsra4KNbVVbUJq66KddWoRk2uGU0mi5YFgwZBEJFdv3+cYD3n/vBzFt73vbv3eKdSITnnCW3qdyjAx1RZ0q2opAO8osolTVFRH/hTFjIPSQQBj+iPLGRaItIDVn7puEQ022hy/mIOSkQLE70xuyERYI3emuiZ2YqKGsCPJnpg1qOiHeBXE10xq1FRD/jDROchiSAEQ/ptoqMS0SGStfWgRHRip9Gp9ktEFyZ6Z+6GRIBVemOiF2bb/cpSSmvufmcn6DD33KfhzmVfO4L/e+cscoKyDcgJmvSJKvfUt4sF0CVVJNp2/Q2ARLW8lRXV2/AFaC6aaIn3fTRXA01FEy3vUUQwBtSyViYRwQBQS1qZRQRdQC1nZRERtAC1lBUt6ZpLAlCnWsaKlnPDK9CnfS2aaCm3XQJdDHQqmmgZ99wCk+hZ6HsYhgRAfxPq+qfcN5EyAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.next:active {
+    opacity: 0.3;
+    background-color: cadetblue;
+}
+
+.bott {
+    width: 100%;
+    border: 0 solid red;
+    margin: -20px auto;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: 83px;
+    left: 0;
+    right: 0;
+}
+
+.bott .shunxu {
+    font-size: 16px;
+    width: 100%;
+    border: 0 solid red;
+    text-align: center;
+}
+
+.bott .time {
+    width: 100%;
+    font-size: 14px;
+    border: 0 solid red;
+    text-align: center;
+}
+
+/*下拉框盒子*/
+.box {
+    width: 340px;
+    height: 10px;
+    border: 0 solid blue;
+    margin: 9px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.box .box1 {
+    width: 100px;
+    height: 30px;
+    border: 0 solid blue;
+    margin: 2px auto;
+}
+
+/*自动听读按钮*/
+.App-button {
+    width: 75%;
+    height: 44px;
+    border: 1px solid #A0A0A0;
+    font-size: 16px;
+    margin: 0 auto;
+    color: gray;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 240px;
+}
+
+.WrpBott {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background-color: white;
+    border-top: 1px solid #ECECEC;
+}
+
+.WrpBott select {
+    font-size: 14px;
+}
+
+.cardBehind {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 115px;
+    border: 1px solid #ECECEC;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.select-ctrl {
+    font-size: 14px;
+    height: 2px;
+}
+
+.wordCard {
+    width: 340px;
+    height: 100vh;
+    border: 1px solid gray;
+    margin: 10px 0 auto;
+    position: fixed;
+    top: 0;
+    left: 16px;
+}
+
+.cardWrp {
+    width: 100%;
+    border: 0 solid red;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+
+}
+
+.wordlist {
+    margin: 5px 5px;
+    width: 100%;
+}
+
+.wordItem {
+    float: left;
+}
+
+.wordItem .changeBgcolor {
+    position: absolute;
+    height: 36px;
+    background-color: #93d898;
+    border-radius: 5px;
+}
+
+.cardItem {
+    height: 36px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0 5px 5px;
+    line-height: 36px;
+    border-radius: 5px;
+    color: #7C7C7C;
+    font-size: 14px;
+    display: block;
+    position: relative;
+}
+
+.showA {
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #e8e3e3;
+    line-height: 100px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+
+.cardBtnRight {
+    width: 174px;
+    height: 44px;
+    /*border: 1px solid gray;*/
+    font-size: 18px;
+    line-height: 44px;
+    text-align: center;
+    color: gray;
+    border-radius: 3px;
+    margin: 10px auto;
+    background-color: #f6f6f6;
+}
+
+.cardButton {
+    width: 320px;
+    position: fixed;
+    border: 0 solid gray;
+    margin: 80px auto;
+    clear: both;
+}
+
+.cardBtnLeft {
+    width: 150px;
+    height: 30px;
+    border: 1px solid gray;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: gray;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.bottCardBtn {
+    position: fixed;
+    margin-bottom: 0;
+}
+
+.panel_scratchCard {
+    top: 65%;
+    position: absolute;
+    user-select: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.font_pinyin {
+    font-size: 5vw;
+}
+
+.font_chinese {
+    font-size: 15vw;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 362px) {
+    /*当屏幕尺寸小于362px时，应用下面的CSS样式*/
+    .bott {
+        margin:-35px auto;
+
+    }
+}
